@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Primário -->
+    <title>Dev Academy — Kit de Criação: Agentes de IA (E-book Gratuito)</title>
+    <meta name="description" content="Baixe gratuitamente o Kit de Criação de Agentes de IA da Dev Academy. Do zero à criação de sistemas autônomos com n8n, Make e ReAct, mesmo sem saber programar." />
+    <meta name="keywords" content="agentes de ia, dev academy, inteligência artificial, no-code, n8n, make, prompt engineering, automações, ebook gratuito ia" />
+    <meta name="author" content="Dev Academy" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Dev Academy — Kit de Criação: Agentes de IA" />
+    <meta property="og:description" content="Do zero à criação de agentes inteligentes autônomos, mesmo sem saber programar. Download 100% gratuito em PDF." />
+    <meta property="og:image" content="./assets/capa_ebook_original.png" />
+    <meta property="og:url" content="https://site-design-future.vercel.app" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dev Academy — Kit de Criação: Agentes de IA" />
+    <meta name="twitter:description" content="Aprenda a construir agentes inteligentes autônomos sem programar. E-book oficial da Dev Academy." />
+    <meta name="twitter:image" content="./assets/capa_ebook_original.png" />
+
+    <!-- Favicon Dev Academy -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238B5CF6'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
+
+    <!-- Google Fonts: Space Grotesk + Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&family=Unbounded:wght@700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- Iluminação Ambiente Futurista em Roxo e Neon -->
+    <div class="ambient-glow glow-top" aria-hidden="true"></div>
+    <div class="ambient-glow glow-mid" aria-hidden="true"></div>
+    <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+    <div class="grid-overlay" aria-hidden="true"></div>
+
+    <!-- 1. HEADER -->
+    <header class="site-header" id="topo">
+      <div class="header-container">
+        <a href="#topo" class="brand-lockup" aria-label="Dev Academy - Início">
+          <div class="brand-icon-box">
+            <svg class="brand-symbol-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <span class="brand-text">DEV <strong>ACADEMY</strong></span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Navegação Principal">
+          <ul class="nav-list">
+            <li><a href="#servicos" class="nav-link">Serviços</a></li>
+            <li><a href="#sobre" class="nav-link">O Material</a></li>
+            <li><a href="#capitulos" class="nav-link">Conteúdo</a></li>
+            <li><a href="#projetos" class="nav-link">Projetos Práticos</a></li>
+            <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
+            <li><a href="#preview" class="nav-link">Prévia do E-book</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <a href="./downloads/kit-criacao-agentes-ia-devacademy.pdf" download="Kit_Criacao_Agentes_IA_DevAcademy.pdf" class="btn btn-primary btn-sm btn-download-trigger" id="headerDownloadBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Baixar E-book Grátis</span>
+          </a>
+
+          <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu mobile">
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Mobile -->
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <nav class="mobile-nav" aria-label="Navegação Mobile">
+          <ul class="mobile-nav-list">
+            <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
+            <li><a href="#sobre" class="mobile-nav-link">O Material</a></li>
+            <li><a href="#capitulos" class="mobile-nav-link">Conteúdo</a></li>
+            <li><a href="#projetos" class="mobile-nav-link">Projetos Práticos</a></li>
+            <li><a href="#beneficios" class="mobile-nav-link">Benefícios</a></li>
+            <li><a href="#preview" class="mobile-nav-link">Prévia do E-book</a></li>
+          </ul>
+          <div class="mobile-menu-cta">
+            <a href="./downloads/kit-criacao-agentes-ia-devacademy.pdf" download="Kit_Criacao_Agentes_IA_DevAcademy.pdf" class="btn btn-primary btn-block btn-download-trigger">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Baixar E-book Grátis (PDF)</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- 2. HERO SECTION -->
+      <section class="hero-section" id="hero">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <div class="badge-pill hero-badge animate-on-scroll">
+              <span class="badge-dot"></span>
+              <span>KIT DE CRIAÇÃO • AGENTES DE IA</span>
+              <span class="badge-tag">100% GRATUITO</span>
+            </div>
+
+            <h1 class="hero-title animate-on-scroll">
+              Domine a criação de <span class="highlight-purple">Agentes de IA</span> autônomos, do zero.
+            </h1>
+
+            <p class="hero-description animate-on-scroll">
+              Um manual prático e objetivo da <strong>Dev Academy</strong>. Descubra como construir colaboradores digitais inteligentes com o padrão ReAct, plataformas No-Code (n8n e Make) e prompts à prova de alucinações — sem precisar programar.
+            </p>
+
+            <div class="hero-actions animate-on-scroll">
+              <a href="./downloads/kit-criacao-agentes-ia-devacademy.pdf" download="Kit_Criacao_Agentes_IA_DevAcademy.pdf" class="btn btn-primary btn-lg btn-glow btn-download-trigger">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Baixar Kit em PDF Agora</span>
+              </a>
+
+              <a href="#capitulos" class="btn btn-outline btn-lg">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Ver o que você vai aprender</span>
+              </a>
+            </div>
+
+            <!-- Metadados de Confiança e Valor -->
+            <div class="hero-meta animate-on-scroll">
+              <div class="meta-item">
+                <span class="meta-icon">⚡</span>
+                <span class="meta-text">Acesso imediato</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">📖</span>
+                <span class="meta-text">PDF de 8 Páginas Direto ao Ponto</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-icon">✓</span>
+                <span class="meta-text">Sem cadastro obrigatório</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Mockup 3D com a Capa Oficial do E-book -->
+          <div class="hero-visual animate-on-scroll" aria-hidden="true">
+            <div class="hero-cover-wrapper">
+              <div class="hero-glow-back"></div>
+              
+              <!-- Moldura Futurista do E-book -->
+              <div class="ebook-3d-card">
+                <div class="ebook-spine"></div>
+                <img src="./assets/capa_ebook_original.png" alt="Capa Oficial: Kit de Criação Agentes de IA - Dev Academy" class="ebook-cover-img" />
+                <div class="ebook-gloss"></div>
+              </div>
+
+              <!-- Badges Flutuantes inspiradas na referência técnica -->
+              <div class="floating-tech-badge badge-top-right">
+                <div class="badge-tech-icon">✦</div>
+                <div class="badge-tech-content">
+                  <span class="b-label">Framework</span>
+                  <span class="b-value">ReAct + No-Code</span>
+                </div>
+              </div>
+
+              <div class="floating-tech-badge badge-bottom-left">
+                <div class="badge-tech-icon">🤖</div>
+                <div class="badge-tech-content">
+                  <span class="b-label">Stack de Automação</span>
+                  <span class="b-value">n8n • Make • Dify</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TICKER DE TECNOLOGIAS E FERRAMENTAS -->
+      <section class="ticker-section" aria-label="Tecnologias abordadas no material">
+        <div class="ticker-track">
+          <div class="ticker-item"><span>CLAUDE 3.7 & GPT-4o</span></div>
+          <div class="ticker-item">✦</div>
+          <div class="ticker-item"><span>N8N WORKFLOWS</span></div>
+          <div class="ticker-item">✦</div>
+          <div class="ticker-item"><span>MAKE.COM INTEGRATIONS</span></div>
+          <div class="ticker-item">✦</div>
+          <div class="ticker-item"><span>FRAMEWORK C-R-O-F</span></div>
+          <div class="ticker-item">✦</div>
+          <div class="ticker-item"><span>ENXAMES MULTI-AGENTES</span></div>
+          <div class="ticker-item">✦</div>
+          <div class="ticker-item"><span>WHATSAPP AUTÔNOMO</span></div>
+          <div class="ticker-item">✦</div>
+          <div class="ticker-item"><span>DIFY & FLOWISE RAG</span></div>
+          <div class="ticker-item">✦</div>
+          <div class="ticker-item"><span>CLAUDE 3.7 & GPT-4o</span></div>
+          <div class="ticker-item">✦</div>
+          <div class="ticker-item"><span>N8N WORKFLOWS</span></div>
+        </div>
+      </section>
+
+      <!-- 3. SEÇÃO DE SERVIÇOS ESPECIALIZADOS -->
+      <section class="section services-showcase-section" id="servicos">
+        <div class="container">
+          <div class="section-header text-center animate-on-scroll">
+            <span class="section-tag">SERVIÇOS DEV ACADEMY</span>
+            <h2 class="section-title">Soluções digitais de alta tecnologia e impacto</h2>
+            <p class="section-subtitle">
+              Desenvolvemos produtos digitais modernos sob medida, combinando design de nível internacional, inteligência artificial e engenharia de software escalável.
+            </p>
+          </div>
+
+          <div class="services-container" id="servicesShowcase">
+            <!-- Renderizado dinamicamente via services.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. APRESENTAÇÃO DO MATERIAL (O Salto Tecnológico) -->
+      <section class="section about-section" id="sobre">
+        <div class="container">
+          <div class="section-header text-center animate-on-scroll">
+            <span class="section-tag">POR QUE AGORA?</span>
+            <h2 class="section-title">Em 2026, empresas não procuram quem apenas digita no ChatGPT</h2>
+            <p class="section-subtitle">
+              O mercado busca profissionais capazes de estruturar ecossistemas de agentes autônomos que operam 24/7, coletando informações, tomando decisões estratégicas e executando processos completos.
+            </p>
+          </div>
+
+          <!-- Comparativo Chatbot vs Agente Autônomo (Baseado na Pág. 03 do E-book) -->
+          <div class="comparison-grid">
+            <div class="comp-card card-old animate-on-scroll">
+              <div class="comp-badge old-badge">Chatbot Tradicional (Passado)</div>
+              <ul class="comp-list">
+                <li><span class="bullet-cross">✕</span> Depende 100% de prompts humanos contínuos.</li>
+                <li><span class="bullet-cross">✕</span> Responde apenas à última mensagem recebida.</li>
+                <li><span class="bullet-cross">✕</span> Não acessa a internet nem softwares externos sozinho.</li>
+                <li><span class="bullet-cross">✕</span> Se limita a produzir texto estático.</li>
+              </ul>
+            </div>
+
+            <div class="comp-card card-future animate-on-scroll">
+              <div class="comp-badge future-badge">Agente de IA Autônomo (O Futuro)</div>
+              <ul class="comp-list">
+                <li><span class="bullet-check">✓</span> Recebe um objetivo e traça o plano de execução sozinho.</li>
+                <li><span class="bullet-check">✓</span> Possui memória de curto e longo prazo (Bancos Vetoriais & RAG).</li>
+                <li><span class="bullet-check">✓</span> Conecta-se a APIs, CRMs, e-mails, bancos de dados e WhatsApp.</li>
+                <li><span class="bullet-check">✓</span> Executa ações no mundo real, avalia os retornos e se auto-corrige.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. CAPÍTULOS E CONTEÚDO REAL DO E-BOOK -->
+      <section class="section chapters-section" id="capitulos">
+        <div class="container">
+          <div class="section-header text-center animate-on-scroll">
+            <span class="section-tag">SUMÁRIO COMPLETO DO E-BOOK</span>
+            <h2 class="section-title">O que você vai dominar neste material</h2>
+            <p class="section-subtitle">
+              Estruturado em 6 módulos diretos, o kit aborda a arquitetura, as ferramentas No-Code e os frameworks práticos de prompt para você sair do zero hoje.
+            </p>
+          </div>
+
+          <div class="chapters-grid" id="chaptersGrid">
+            <!-- Renderizado dinamicamente via JavaScript com dados de ebook.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. PROJETOS PRÁTICOS PRONTOS PARA IMPLEMENTAR -->
+      <section class="section projects-section" id="projetos">
+        <div class="container">
+          <div class="section-header text-center animate-on-scroll">
+            <span class="section-tag">CASOS REAIS DO MANUAL</span>
+            <h2 class="section-title">3 Projetos de Agentes para Construir Hoje</h2>
+            <p class="section-subtitle">
+              Casos de uso altamente lucrativos e de alta demanda que podem ser implementados e comercializados com contratos de manutenção recorrente.
+            </p>
+          </div>
+
+          <div class="projects-grid" id="practicalProjectsGrid">
+            <!-- Injetado dinamicamente via ebook.js -->
+          </div>
+
+          <div class="callout-value-box animate-on-scroll">
+            <div class="callout-icon">💡</div>
+            <div class="callout-content">
+              <strong>Valor Agregado do Mercado:</strong>
+              <p>Qualquer uma dessas soluções pode ser vendida para pequenas e médias empresas por contratos de <strong>R$ 1.500 a R$ 5.000 mensais</strong> de manutenção e suporte contínuo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. SEÇÃO DE BENEFÍCIOS -->
+      <section class="section benefits-section" id="beneficios">
+        <div class="container">
+          <div class="section-header text-center animate-on-scroll">
+            <span class="section-tag">DIFERENCIAIS DO GUIA</span>
+            <h2 class="section-title">Por que você deve baixar este kit agora</h2>
+            <p class="section-subtitle">
+              Conhecimento condensado com rigor técnico e abordagem prática para quem não quer perder tempo com teorias vazias.
+            </p>
+          </div>
+
+          <div class="benefits-grid" id="benefitsGrid">
+            <!-- Injetado dinamicamente via ebook.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. VISUALIZAÇÃO E PRÉVIA DO E-BOOK -->
+      <section class="section preview-section" id="preview">
+        <div class="container preview-container">
+          <div class="preview-text-col animate-on-scroll">
+            <span class="section-tag">PRODUTO DIGITAL COMPLETO</span>
+            <h2 class="section-title">Material editorial profissional com design impecável</h2>
+            <p class="preview-description">
+              Cada página foi diagramada com foco na máxima absorção do conteúdo: fluxogramas arquiteturais, diagramas de raciocínio ReAct, templates prontos de Prompt Engineering e diretrizes de monetização na Dev Academy.
+            </p>
+            
+            <div class="preview-highlights">
+              <div class="p-item">
+                <span class="p-check">✓</span>
+                <div>
+                  <strong>Loop ReAct Decodificado</strong>
+                  <p>Aprenda o ciclo de Percepção, Reflexão, Ação e Validação.</p>
+                </div>
+              </div>
+              <div class="p-item">
+                <span class="p-check">✓</span>
+                <div>
+                  <strong>Template Universal C-R-O-F</strong>
+                  <p>Copie e cole a estrutura oficial de prompt com Negative Prompting.</p>
+                </div>
+              </div>
+              <div class="p-item">
+                <span class="p-check">✓</span>
+                <div>
+                  <strong>Modelos de Orquestração No-Code</strong>
+                  <p>Descubra como conectar Make.com e n8n ao WhatsApp e CRMs.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="preview-cta-block">
+              <a href="./downloads/kit-criacao-agentes-ia-devacademy.pdf" download="Kit_Criacao_Agentes_IA_DevAcademy.pdf" class="btn btn-primary btn-lg btn-download-trigger">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Baixar Kit de Criação em PDF</span>
+              </a>
+              <span class="cta-note">Download instantâneo • Formato PDF • Leitura de 15 minutos</span>
+            </div>
+          </div>
+
+          <div class="preview-mockup-col animate-on-scroll">
+            <div class="preview-card-showcase">
+              <img src="./assets/capa_ebook_original.png" alt="Prévia do Kit de Criação Agentes de IA" class="preview-cover-main" />
+              <div class="preview-badge-overlay">EDIÇÃO OFICIAL 2026</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. CHAMADA PARA AÇÃO FINAL (CTA) -->
+      <section class="section final-cta-section">
+        <div class="container">
+          <div class="cta-card animate-on-scroll">
+            <div class="cta-glow" aria-hidden="true"></div>
+            <span class="badge-pill cta-badge">ACESSO IMEDIATO & GRATUITO</span>
+            <h2 class="cta-title">
+              Você agora possui as chaves da <span class="highlight-purple">automação inteligente</span>.
+            </h2>
+            <p class="cta-subtitle">
+              A criação de agentes é a habilidade com maior assimetria de retorno desta década. Quem aprende a construir colaboradores digitais autônomos hoje estará à frente de 99% do mercado amanhã.
+            </p>
+
+            <div class="cta-buttons">
+              <a href="./downloads/kit-criacao-agentes-ia-devacademy.pdf" download="Kit_Criacao_Agentes_IA_DevAcademy.pdf" class="btn btn-primary btn-xl btn-glow btn-download-trigger" id="finalDownloadBtn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Baixar o E-book Grátis (PDF Completo)</span>
+              </a>
+            </div>
+
+            <p class="cta-security">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8B5CF6" stroke-width="2.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>Arquivo PDF seguro hospedado na Dev Academy. Sem cadastros ocultos.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 9. FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-col brand-col">
+          <a href="#topo" class="brand-lockup">
+            <div class="brand-icon-box">
+              <svg class="brand-symbol-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <span class="brand-text">DEV <strong>ACADEMY</strong></span>
+          </a>
+          <p class="footer-about">
+            Desenvolvido com excelência por Dev Academy. Formando a nova geração de construtores de IA, automações de alto valor e ecossistemas inteligentes.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#sobre">O Salto Tecnológico</a></li>
+            <li><a href="#capitulos">Módulos do Manual</a></li>
+            <li><a href="#projetos">3 Projetos Práticos</a></li>
+            <li><a href="#beneficios">Diferenciais do Kit</a></li>
+            <li><a href="#preview">Prévia do E-book</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">O E-book</h4>
+          <ul class="footer-links">
+            <li><a href="./downloads/kit-criacao-agentes-ia-devacademy.pdf" download="Kit_Criacao_Agentes_IA_DevAcademy.pdf" class="btn-download-trigger">Download PDF</a></li>
+            <li><a href="#capitulos">Framework ReAct</a></li>
+            <li><a href="#capitulos">Engenharia C-R-O-F</a></li>
+            <li><a href="#projetos">Stack No-Code (n8n/Make)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Comunidade</h4>
+          <p class="footer-contact-info">Acesse nossos workshops práticos e modelos clonáveis.</p>
+          <div class="social-links">
+            <a href="https://devacademy.com.br" target="_blank" rel="noopener noreferrer" class="social-btn">devacademy.com.br</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-container">
+          <p class="copyright">
+            &copy; <span id="currentYear"></span> Dev Academy. Todos os direitos reservados.
+          </p>
+          <p class="disclaimer">
+            Kit de Criação de Agentes de IA • Edição Oficial. Material educacional gratuito.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Feedback flutuante de download acionado -->
+    <div class="download-toast" id="downloadToast" role="status" aria-live="polite">
+      <div class="toast-icon">✓</div>
+      <div class="toast-content">
+        <strong>Download Iniciado!</strong>
+        <span>Seu e-book Kit de Criação de Agentes de IA está sendo transferido.</span>
+      </div>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
