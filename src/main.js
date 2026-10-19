@@ -9,6 +9,7 @@ import { servicesData } from './data/services.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initYear();
+  initHeader();
   initMobileMenu();
   initServices();
   initChapters();
@@ -24,6 +25,43 @@ function initYear() {
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+}
+
+/* 1.1 Header Inteligente com detecção de Scroll e Nav Pills Ativos */
+function initHeader() {
+  const header = document.querySelector('.site-header');
+  const navItems = document.querySelectorAll('.nav-capsule-item');
+  const mobileNavItems = document.querySelectorAll('.mobile-nav-link');
+  const sections = document.querySelectorAll('section[id], header[id]');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+
+    // Scroll Spy para ativar a pílula do menu correspondente
+    let current = '';
+    const scrollPosition = window.scrollY + 160;
+
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    if (current) {
+      navItems.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+      });
+      mobileNavItems.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+      });
+    }
+  }, { passive: true });
 }
 
 /* 2. Menu Mobile Acessível */
