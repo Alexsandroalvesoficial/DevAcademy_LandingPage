@@ -41,9 +41,10 @@
     <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
     <div class="grid-overlay" aria-hidden="true"></div>
 
-    <!-- 1. HEADER -->
+    <!-- 1. HEADER PREMIUM ESTILO STARTUP -->
     <header class="site-header" id="topo">
       <div class="header-container">
+        <!-- Logo / Brand com subtítulo de produto -->
         <a href="#topo" class="brand-lockup" aria-label="Dev Academy - Início">
           <div class="brand-icon-box">
             <svg class="brand-symbol-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -52,28 +53,34 @@
               <polyline points="2 12 12 17 22 12"></polyline>
             </svg>
           </div>
-          <span class="brand-text">DEV <strong>ACADEMY</strong></span>
+          <div class="brand-text-group">
+            <span class="brand-text">DEV <strong>ACADEMY</strong></span>
+            <span class="brand-subtext">Digital Solutions & AI</span>
+          </div>
         </a>
 
-        <nav class="desktop-nav" aria-label="Navegação Principal">
-          <ul class="nav-list">
-            <li><a href="#servicos" class="nav-link">Serviços</a></li>
-            <li><a href="#sobre" class="nav-link">O Material</a></li>
-            <li><a href="#capitulos" class="nav-link">Conteúdo</a></li>
-            <li><a href="#projetos" class="nav-link">Projetos Práticos</a></li>
-            <li><a href="#beneficios" class="nav-link">Benefícios</a></li>
-            <li><a href="#preview" class="nav-link">Prévia do E-book</a></li>
+        <!-- Menu Flutuante / Nav Pill Capsule -->
+        <nav class="desktop-nav-capsule" aria-label="Navegação Principal">
+          <ul class="nav-capsule-list">
+            <li><a href="#hero" class="nav-capsule-item active">Home</a></li>
+            <li><a href="#servicos" class="nav-capsule-item">Serviços</a></li>
+            <li><a href="#sobre" class="nav-capsule-item">O Material</a></li>
+            <li><a href="#capitulos" class="nav-capsule-item">Conteúdo</a></li>
+            <li><a href="#projetos" class="nav-capsule-item">Projetos</a></li>
+            <li><a href="#beneficios" class="nav-capsule-item">Benefícios</a></li>
           </ul>
         </nav>
 
+        <!-- Ação Principal / Botão Let's Talk com Seta em Gradiente Roxo -->
         <div class="header-actions">
-          <a href="./downloads/kit-criacao-agentes-ia-devacademy.pdf" download="Kit_Criacao_Agentes_IA_DevAcademy.pdf" class="btn btn-primary btn-sm btn-download-trigger" id="headerDownloadBtn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            <span>Baixar E-book Grátis</span>
+          <a href="./downloads/kit-criacao-agentes-ia-devacademy.pdf" download="Kit_Criacao_Agentes_IA_DevAcademy.pdf" class="btn-pill-cta btn-download-trigger" id="headerDownloadBtn">
+            <span class="btn-pill-label">Baixar E-book</span>
+            <span class="btn-pill-icon-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
           </a>
 
           <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menu mobile">
@@ -84,25 +91,26 @@
         </div>
       </div>
 
-      <!-- Menu Mobile -->
+      <!-- Menu Mobile Flutuante e Glassmorphism -->
       <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
         <nav class="mobile-nav" aria-label="Navegação Mobile">
           <ul class="mobile-nav-list">
+            <li><a href="#hero" class="mobile-nav-link active">Home</a></li>
             <li><a href="#servicos" class="mobile-nav-link">Serviços</a></li>
             <li><a href="#sobre" class="mobile-nav-link">O Material</a></li>
             <li><a href="#capitulos" class="mobile-nav-link">Conteúdo</a></li>
-            <li><a href="#projetos" class="mobile-nav-link">Projetos Práticos</a></li>
+            <li><a href="#projetos" class="mobile-nav-link">Projetos</a></li>
             <li><a href="#beneficios" class="mobile-nav-link">Benefícios</a></li>
-            <li><a href="#preview" class="mobile-nav-link">Prévia do E-book</a></li>
           </ul>
           <div class="mobile-menu-cta">
-            <a href="./downloads/kit-criacao-agentes-ia-devacademy.pdf" download="Kit_Criacao_Agentes_IA_DevAcademy.pdf" class="btn btn-primary btn-block btn-download-trigger">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                <polyline points="7 10 12 15 17 10"></polyline>
-                <line x1="12" y1="15" x2="12" y2="3"></line>
-              </svg>
-              <span>Baixar E-book Grátis (PDF)</span>
+            <a href="./downloads/kit-criacao-agentes-ia-devacademy.pdf" download="Kit_Criacao_Agentes_IA_DevAcademy.pdf" class="btn-pill-cta btn-pill-cta-mobile btn-download-trigger">
+              <span class="btn-pill-label">Baixar E-book Grátis (PDF)</span>
+              <span class="btn-pill-icon-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
             </a>
           </div>
         </nav>
@@ -199,24 +207,41 @@
 
       <!-- TICKER DE TECNOLOGIAS E FERRAMENTAS -->
       <section class="ticker-section" aria-label="Tecnologias abordadas no material">
-        <div class="ticker-track">
-          <div class="ticker-item"><span>CLAUDE 3.7 & GPT-4o</span></div>
-          <div class="ticker-item">✦</div>
-          <div class="ticker-item"><span>N8N WORKFLOWS</span></div>
-          <div class="ticker-item">✦</div>
-          <div class="ticker-item"><span>MAKE.COM INTEGRATIONS</span></div>
-          <div class="ticker-item">✦</div>
-          <div class="ticker-item"><span>FRAMEWORK C-R-O-F</span></div>
-          <div class="ticker-item">✦</div>
-          <div class="ticker-item"><span>ENXAMES MULTI-AGENTES</span></div>
-          <div class="ticker-item">✦</div>
-          <div class="ticker-item"><span>WHATSAPP AUTÔNOMO</span></div>
-          <div class="ticker-item">✦</div>
-          <div class="ticker-item"><span>DIFY & FLOWISE RAG</span></div>
-          <div class="ticker-item">✦</div>
-          <div class="ticker-item"><span>CLAUDE 3.7 & GPT-4o</span></div>
-          <div class="ticker-item">✦</div>
-          <div class="ticker-item"><span>N8N WORKFLOWS</span></div>
+        <div class="ticker-wrapper">
+          <div class="ticker-track">
+            <div class="ticker-group">
+              <span class="ticker-item">CLAUDE 3.7 & GPT-4o</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">N8N WORKFLOWS</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">MAKE.COM INTEGRATIONS</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">FRAMEWORK C-R-O-F</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">ENXAMES MULTI-AGENTES</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">WHATSAPP AUTÔNOMO</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">DIFY & FLOWISE RAG</span>
+              <span class="ticker-sep">✦</span>
+            </div>
+            <div class="ticker-group" aria-hidden="true">
+              <span class="ticker-item">CLAUDE 3.7 & GPT-4o</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">N8N WORKFLOWS</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">MAKE.COM INTEGRATIONS</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">FRAMEWORK C-R-O-F</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">ENXAMES MULTI-AGENTES</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">WHATSAPP AUTÔNOMO</span>
+              <span class="ticker-sep">✦</span>
+              <span class="ticker-item">DIFY & FLOWISE RAG</span>
+              <span class="ticker-sep">✦</span>
+            </div>
+          </div>
         </div>
       </section>
 
